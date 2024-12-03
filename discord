@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Login Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #5865F2; /* Discord barva */
+            color: white;
+        }
+        button {
+            background-color: #7289DA;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5A6FA4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Discord Login</h1>
+    <p>Click the button below to go to the Discord login page:</p>
+    <button id="loginButton">Login with Discord</button>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            window.location.href = "https://discord.com/login";
+        });
+    </script>
+</body>
+</html>
