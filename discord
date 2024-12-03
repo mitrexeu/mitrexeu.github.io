@@ -1,44 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Login Redirect</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #5865F2; /* Discord barva */
-            color: white;
-        }
-        button {
-            background-color: #7289DA;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #5A6FA4;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to Discord Login</h1>
-    <p>Click the button below to go to the Discord login page:</p>
-    <button id="loginButton">Login with Discord</button>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #5865F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
 
-    <script>
-        document.getElementById("loginButton").addEventListener("click", function() {
-            window.location.href = "https://discord.com/login";
-        });
-    </script>
-</body>
-</html>
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-box {
+  background: #2c2f33;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #7289DA;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #5b6dae;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #7289DA;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
